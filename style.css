@@ -1,0 +1,36 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+}
+
+p{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.jumbotron{
+    background-image: linear-gradient(to right, rgb(66, 66, 66), rgba(32, 32, 32, 0.877));
+    /* color: #ff0000; */
+    color: #fff;
+}
+
+h1{
+    font-weight: 600;
+}
+
+.heading{
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+}
+
+.row{
+    margin: 5px;
+    padding: 20px 15px;
+    background-color: rgb(240, 240, 240);
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* This centers the div horizontally */
+    border-radius: 15px;
+}

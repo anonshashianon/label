@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  
+    
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>P Type Cabel Label Online Print Tool </title>
+
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+ 
+  
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Cabel Label Online Print Tool.</h1>
+      <!--                <p>There are three methods to use this online tool</p>
+ <p>1 If you only have less than 100 cable labels to print, you can download the OpenOffice/MS Word template.</p>
+ <p>2 If you have hundreds of cable labels to print, and these label content are stored in spread sheet, then you can download our Excel DATA ENTRY FORM, copy your data to the Excel DATA ENTRY FORM, then upload and generate the PDF file.</p>
+ <p>3 If all the cable labels have the same content, then you can generate the PDF file directly. </p>-->
+      <!-- <p>Attention: The Excel file is not a printable template, it is a kind of DATA ENTER FORM<BR>After input your content in the Excel file, you need to upload the file to generate the ready for print PDF file.</p>
+                 
+                <p><a  href="http://mr-label.com/plabel">Use other methods to print</a></p>
+            -->
+
+    </div>
+  </div>
+
+  <div class="container">
+
+
+
+
+
+
+    <!-- Example row of columns -->
+    <div class="row">
+
+
+
+
+      <!-- <h2>Online Data Entry Form</h2> -->
+      <!-- <p>You have the highest productivity.</p> -->
+
+
+      <h3 class="heading">STEP 1</h3>
+      <p>Downlaod the Excel Template File, then input your content.
+      <p>
+      <p><b>Attention: <br>Excel formula is not support.<br> Plese don't change the Excel format from "xls" to "xlsx"
+        </b></p>
+
+
+      <p><a href="template/template_1%261.xls">Downlaod(Each side has one line) &raquo;</a> </p>
+      <p><a href="template/template_2%262.xls">Downlaod(Each side has two lines) &raquo;</a> </p>
+      <p><a href="template/template_1%262.xls">Downlaod(A side has two lines, B side has one line) &raquo;</a> </p>
+
+      <!-- <form name="input" action="http://mr-label.com/plabel/print.php" method="post" enctype="multipart/form-data">
+
+        <h3>STEP 2</h3>
+        <p>Upload your Excel file here.</p>
+        <div class="form-group">
+          <label for="exampleInputFile">Choose your Excel File</label>
+          <input type="file" name="file" id="fileInput">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p></p>
+
+
+      </form>  -->
+
+      <form name="input" action="http://mr-label.com/plabel/print.php" method="post" enctype="multipart/form-data">
+
+        <h3 class="heading">STEP 2</h3>
+        <!--<p>Upload your Excel file here.</p>-->
+        <div class="form-group">
+            <label for="exampleInputFile">Choose your Excel File</label>
+            <input type="file" name="file" id="fileInput" onchange="enableSubmit()">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitButton" disabled>Submit</button>
+        <p></p>
+    
+    </form>
+    
+    </div>
+
+
+    <!-- <form action="http://mr-label.com/plabel/print.php" method="post">
+      <input type="file" name="fileInput" id="fileInput" />
+      <input type="submit" value="submit" disabled />
+    </form> -->
+
+    <!-- <form action="http://mr-label.com/plabel/print.php" method="post">
+      <fieldset>
+        <input type="file" />
+      </fieldset>
+      <fieldset>
+        <input type="submit" />
+      </fieldset>
+    </form> -->
+  </div>
+
+  <hr>
+
+  <!-- <footer>
+
+  </footer> -->
+  </div> <!-- /container <a href="template/template1.xlsx" target="_blank">Downlaod</a>-->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../../cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    function enableSubmit() {
+        var fileInput = document.getElementById('fileInput');
+        var submitButton = document.getElementById('submitButton');
+
+        // Enable the submit button if a file is selected, otherwise disable it
+        submitButton.disabled = !fileInput.value;
+    }
+</script>
+  <!-- <script type="text/javascript">
+    $(document).ready(
+      function () {
+        $('input:submit').attr('disabled', true);
+        $('input:file').change(
+          function () {
+            if ($(this).val()) {
+              $('input:submit').removeAttr('disabled');
+            }
+            else {
+              $('input:submit').attr('disabled', true);
+            }
+          });
+      });
+  </script> -->
+</body>
+
+</html>
